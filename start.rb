@@ -12,4 +12,4 @@ browser = Capybara.current_session
 deepart = Deepart.new(browser)
 
 deepart.login
-deepart.create_image('./photo.jpg', './style.jpg')
+deepart.create_image(ARGV[0], ARGV[1])
