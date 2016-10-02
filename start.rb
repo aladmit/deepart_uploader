@@ -1,6 +1,7 @@
 require 'pry'
 require 'capybara/poltergeist'
 require 'phantomjs'
+require 'colorize'
 require './deepart.rb'
 
 Capybara.register_driver :poltergeist do |app|
@@ -21,8 +22,8 @@ style_path = ARGV[1]
 
 deepart.login
 photo_paths.each_with_index do |photo_path, index|
-  print "Upload image #{index + 1}/#{photo_paths.size}\n"
+  print "Upload image #{index + 1}/#{photo_paths.size}\n".yellow
   deepart.create_image(photo_path, style_path)
 end
 
-puts "All images were upload."
+puts "All images were upload.".green
