@@ -19,7 +19,7 @@ class Deepart
     drop_file(photo_path, 'upload-photo')
     @browser.click_link 'Upload style'
     drop_file(style_path, 'upload-style')
-    sleep 5
+    sleep 10
     @browser.click_button 'Submit'
   end
 
